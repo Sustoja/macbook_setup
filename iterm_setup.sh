@@ -24,29 +24,26 @@ fi
 
 # Install packages
 brew bundle --no-lock --file=- <<EOF
-cask "alacritty"
+cask "iterm2"
 cask "font-ubuntu-mono-nerd-font"
 brew "starship"
-brew "fastfetch"
 EOF
 
 # Create config directories
-mkdir -p "$CONFIG_DIR/alacritty"
+mkdir -p "$CONFIG_DIR"
 
 # Copy config files
-cp "$SCRIPT_DIR/assets/alacritty/alacritty.toml" "$CONFIG_DIR/alacritty/alacritty.toml"
-cp "$SCRIPT_DIR/assets/starship/starship.toml" "$CONFIG_DIR/starship.toml"
+cp "$SCRIPT_DIR/starship.toml" "$CONFIG_DIR/starship.toml"
 
 # Enable hushlogin
 touch "$HOME/.hushlogin"
 
-# Add Alacritty-specific configuration to zshrc if not already present
-if ! grep -q "TERM.*alacritty" "$ZSHRC" 2>/dev/null; then
+# Add iTerm-specific configuration to zshrc if not already present
+if ! grep -q "TERM.*iTerm" "$ZSHRC" 2>/dev/null; then
     cat >> "$ZSHRC" <<EOF
 
-# Alacritty-specific configuration
-if [ "\$TERM" = "alacritty" ]; then
-    fastfetch
+# iTerm-specific configuration
+if [ "\$TERM_PROGRAM" = "iTerm.app" ]; then
     eval "\$(starship init zsh)"
 fi
 EOF
