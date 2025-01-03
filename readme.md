@@ -45,10 +45,6 @@ Este script instala y configura el terminal [iTerm2](https://iterm2.com/) deján
   brew reinstall <paquete>
   ```
 
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
 ## Contribuciones
 
 Se agradecen las contribuciones mediante fork del repositorio y solicitudes de pull request.
