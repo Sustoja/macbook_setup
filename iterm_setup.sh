@@ -33,7 +33,7 @@ EOF
 mkdir -p "$CONFIG_DIR"
 
 # Copy config files
-cp "$SCRIPT_DIR/starship.toml" "$CONFIG_DIR/starship.toml"
+cp "$SCRIPT_DIR/assets/starship/starship_mig.toml" "$CONFIG_DIR/starship.toml"
 
 # Enable hushlogin
 touch "$HOME/.hushlogin"

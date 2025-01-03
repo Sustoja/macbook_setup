@@ -8,7 +8,7 @@ $git_branch\
 $git_status\
 [](fg:#E69373 bg:#86BBD8)\
 $c\
-$elixir\
+$python\
 $elm\
 $golang\
 $haskell\
@@ -63,10 +63,10 @@ symbol = " "
 style = "bg:#06969A"
 format = '[[ $symbol $context ](bg:#06969A)]($style) $path'
 
-[elixir]
-symbol = " "
+[python]
+symbol = "🐍 "
 style = "bg:#86BBD8"
-format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
+format = '[[ $symbol $virtualenv ($version) ](bg:#86BBD8)]($style)'
 
 [elm]
 symbol = " "
@@ -121,4 +121,4 @@ format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = '[[ ♥  $time ](bg:#33658A)]($style)'
+format = '[[ $time ](bg:#33658A)]($style)'
